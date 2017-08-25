@@ -2,10 +2,10 @@ package com.jshvarts.daggerandroidsampleapp
 
 import android.app.Activity
 import android.app.Application
-import com.jshvarts.daggerandroidsampleapp.di.DaggerAppComponent
+import com.jshvarts.daggerandroidsampleapp.di.AppInjector
 import dagger.android.AndroidInjector
-import dagger.android.HasActivityInjector
 import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasActivityInjector
 import javax.inject.Inject
 
 
@@ -16,9 +16,7 @@ class App : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
 
-        DaggerAppComponent
-                .create()
-                .inject(this)
+        AppInjector.init(this)
     }
 
     override fun activityInjector(): AndroidInjector<Activity> = activityInjector

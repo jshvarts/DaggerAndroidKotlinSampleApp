@@ -1,20 +1,20 @@
 package com.jshvarts.daggerandroidsampleapp.lobby
 
-import android.app.Fragment
-import android.content.Context
+
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import dagger.android.AndroidInjection
-import javax.inject.Inject
 import android.widget.TextView
 import butterknife.BindView
 import butterknife.ButterKnife
-import com.jshvarts.daggerandroidsampleapp.R
 import butterknife.Unbinder
+import com.jshvarts.daggerandroidsampleapp.R
+import com.jshvarts.daggerandroidsampleapp.di.Injectable
+import javax.inject.Inject
 
-class LobbyFragment : Fragment() {
+class LobbyFragment : Fragment(), Injectable {
 
     @Inject
     lateinit var lobbyFragmentHelloService: LobbyFragmentHelloService
@@ -36,10 +36,6 @@ class LobbyFragment : Fragment() {
         sayFragmentHello()
     }
 
-    override fun onAttach(context: Context?) {
-        AndroidInjection.inject(this)
-        super.onAttach(context)
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
