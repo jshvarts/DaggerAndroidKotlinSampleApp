@@ -1,23 +1,26 @@
 package com.jshvarts.daggerandroidsampleapp.lobby
 
-import android.app.Fragment
-import android.support.v7.app.AppCompatActivity
+
 import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
+import butterknife.BindView
+import butterknife.ButterKnife
 import com.jshvarts.daggerandroidsampleapp.R
 import com.jshvarts.daggerandroidsampleapp.common.data.CommonHelloService
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
-import dagger.android.HasFragmentInjector
-import javax.inject.Inject
 import dagger.android.DispatchingAndroidInjector
-import android.widget.TextView
-import butterknife.BindView
-import butterknife.ButterKnife
+import dagger.android.support.HasSupportFragmentInjector
+import javax.inject.Inject
 
 
-class LobbyActivity : AppCompatActivity(), HasFragmentInjector {
+class LobbyActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
-    @Inject
+
+
+  @Inject
     lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
 
     @Inject
@@ -47,7 +50,9 @@ class LobbyActivity : AppCompatActivity(), HasFragmentInjector {
         //println("call to LobbyActivityHelloService: " + lobbyActivityHelloService.sayHello())
     }
 
-    override fun fragmentInjector(): AndroidInjector<Fragment> = fragmentDispatchingAndroidInjector
+  override fun supportFragmentInjector(): AndroidInjector<Fragment> = fragmentDispatchingAndroidInjector
+
+
 
     private fun sayCommonHello() {
         commonHelloTextView.text = commonHelloService.sayHello()
