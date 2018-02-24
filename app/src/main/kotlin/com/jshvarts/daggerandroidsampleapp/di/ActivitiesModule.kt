@@ -1,6 +1,6 @@
 package com.jshvarts.daggerandroidsampleapp.di
 
-import com.jshvarts.daggerandroidsampleapp.lobby.LobbyActivity
+import com.jshvarts.daggerandroidsampleapp.com.jshvarts.daggerandroidmvp.lobby.LobbyActivity
 import com.jshvarts.daggerandroidsampleapp.lobby.LobbyActivityModule
 import com.jshvarts.daggerandroidsampleapp.lobby.LobbyFragment
 import com.jshvarts.daggerandroidsampleapp.lobby.LobbyFragmentModule
