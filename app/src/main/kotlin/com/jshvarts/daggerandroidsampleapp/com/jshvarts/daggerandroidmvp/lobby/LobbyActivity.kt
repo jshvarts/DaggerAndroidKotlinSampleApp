@@ -1,4 +1,4 @@
-package com.jshvarts.daggerandroidsampleapp.lobby
+package com.jshvarts.daggerandroidsampleapp.com.jshvarts.daggerandroidmvp.lobby
 
 import android.app.Fragment
 import android.support.v7.app.AppCompatActivity
@@ -13,7 +13,7 @@ import dagger.android.DispatchingAndroidInjector
 import android.widget.TextView
 import butterknife.BindView
 import butterknife.ButterKnife
-
+import com.jshvarts.daggerandroidsampleapp.lobby.LobbyActivityHelloService
 
 class LobbyActivity : AppCompatActivity(), HasFragmentInjector {
 

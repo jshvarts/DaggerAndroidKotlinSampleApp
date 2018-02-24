@@ -6,13 +6,13 @@ apply plugin: 'kotlin-android-extensions'
 
 project.ext {
     supportLibraryVersion = "26.1.0"
-    daggerVersion = "2.11"
+    daggerVersion = "2.13"
     butterKnifeVersion = "8.5.1"
 }
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.3"
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.jshvarts.daggerandroidsampleapp"
         minSdkVersion 19
