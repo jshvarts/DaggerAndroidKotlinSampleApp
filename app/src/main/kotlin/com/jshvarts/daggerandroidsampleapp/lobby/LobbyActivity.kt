@@ -1,7 +1,7 @@
 package com.jshvarts.daggerandroidsampleapp.lobby
 
 import android.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jshvarts.daggerandroidsampleapp.R
 import com.jshvarts.daggerandroidsampleapp.common.data.CommonHelloService
