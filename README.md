@@ -10,7 +10,7 @@ Java version is here: https://github.com/jshvarts/DaggerAndroidSampleApp
 
 ## License
 
-    Copyright 2017 James Shvarts
+    Copyright 2017-2019 James Shvarts
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
