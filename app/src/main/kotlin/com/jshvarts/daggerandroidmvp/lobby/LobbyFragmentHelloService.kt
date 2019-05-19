@@ -1,4 +1,4 @@
-package com.jshvarts.daggerandroidsampleapp.lobby
+package com.jshvarts.daggerandroidmvp.lobby
 
 class LobbyFragmentHelloService {
     fun sayHello() = "Hello from LobbyFragmentHelloService"

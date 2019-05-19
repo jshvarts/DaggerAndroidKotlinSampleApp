@@ -1,7 +1,7 @@
-package com.jshvarts.daggerandroidsampleapp.di
+package com.jshvarts.daggerandroidmvp.di
 
 import android.app.Application
-import com.jshvarts.daggerandroidsampleapp.common.data.CommonHelloService
+import com.jshvarts.daggerandroidmvp.common.data.CommonHelloService
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

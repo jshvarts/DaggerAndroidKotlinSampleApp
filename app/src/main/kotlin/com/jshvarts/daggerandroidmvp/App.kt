@@ -1,8 +1,8 @@
-package com.jshvarts.daggerandroidsampleapp
+package com.jshvarts.daggerandroidmvp
 
 import android.app.Activity
 import android.app.Application
-import com.jshvarts.daggerandroidsampleapp.di.DaggerAppComponent
+import com.jshvarts.daggerandroidmvp.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.HasActivityInjector
 import dagger.android.DispatchingAndroidInjector

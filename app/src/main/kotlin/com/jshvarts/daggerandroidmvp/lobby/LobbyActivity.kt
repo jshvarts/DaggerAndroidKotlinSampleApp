@@ -1,19 +1,18 @@
-package com.jshvarts.daggerandroidsampleapp.lobby
+package com.jshvarts.daggerandroidmvp.lobby
 
-import android.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.jshvarts.daggerandroidsampleapp.R
-import com.jshvarts.daggerandroidsampleapp.common.data.CommonHelloService
+import com.jshvarts.daggerandroidmvp.R
+import com.jshvarts.daggerandroidmvp.common.data.CommonHelloService
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.HasFragmentInjector
 import javax.inject.Inject
 import dagger.android.DispatchingAndroidInjector
 import android.widget.TextView
+import android.app.Fragment
 import butterknife.BindView
 import butterknife.ButterKnife
-
 
 class LobbyActivity : AppCompatActivity(), HasFragmentInjector {
 

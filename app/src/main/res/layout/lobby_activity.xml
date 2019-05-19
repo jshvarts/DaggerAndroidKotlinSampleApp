@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.jshvarts.daggerandroidsampleapp.lobby.LobbyActivity">
+    tools:context="com.jshvarts.daggerandroidmvp.lobby.LobbyActivity">
 
     <TextView
         android:id="@+id/common_hello"
@@ -22,7 +22,7 @@
 
     <fragment
         android:id="@+id/lobby_fragment"
-        android:name="com.jshvarts.daggerandroidsampleapp.lobby.LobbyFragment"
+        android:name="com.jshvarts.daggerandroidmvp.lobby.LobbyFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
