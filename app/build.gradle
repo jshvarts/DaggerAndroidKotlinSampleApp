@@ -9,19 +9,19 @@ apply plugin: 'kotlin-android-extensions'
 project.ext {
     supportLibraryVersion = "28.0.0"
     daggerVersion = "2.22.1"
-    butterKnifeVersion = "8.5.1"
+    butterKnifeVersion = "10.1.0"
 }
 
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
     defaultConfig {
-        applicationId "com.jshvarts.daggerandroidsampleapp"
+        applicationId "com.jshvarts.daggerandroidmvp"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -34,12 +34,16 @@ android {
         test.java.srcDirs += 'src/test/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$project.supportLibraryVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:1.0.2"
 
     // Dagger Core
     implementation "com.google.dagger:dagger:$project.daggerVersion"

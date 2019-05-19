@@ -1,6 +1,5 @@
-package com.jshvarts.daggerandroidsampleapp.lobby
+package com.jshvarts.daggerandroidmvp.lobby
 
-import android.app.Fragment
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +8,10 @@ import android.view.ViewGroup
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 import android.widget.TextView
+import android.app.Fragment
 import butterknife.BindView
 import butterknife.ButterKnife
-import com.jshvarts.daggerandroidsampleapp.R
+import com.jshvarts.daggerandroidmvp.R
 import butterknife.Unbinder
 
 class LobbyFragment : Fragment() {
@@ -22,7 +22,7 @@ class LobbyFragment : Fragment() {
     @BindView(R.id.lobby_fragment_hello)
     lateinit var lobbyFragmentHelloTextView: TextView
 
-    lateinit var unbinder: Unbinder
+    private lateinit var unbinder: Unbinder
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.lobby_fragment, container, false)

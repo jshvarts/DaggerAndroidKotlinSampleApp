@@ -1,9 +1,9 @@
-package com.jshvarts.daggerandroidsampleapp.di
+package com.jshvarts.daggerandroidmvp.di
 
-import com.jshvarts.daggerandroidsampleapp.lobby.LobbyActivity
-import com.jshvarts.daggerandroidsampleapp.lobby.LobbyActivityModule
-import com.jshvarts.daggerandroidsampleapp.lobby.LobbyFragment
-import com.jshvarts.daggerandroidsampleapp.lobby.LobbyFragmentModule
+import com.jshvarts.daggerandroidmvp.lobby.LobbyActivity
+import com.jshvarts.daggerandroidmvp.lobby.LobbyActivityModule
+import com.jshvarts.daggerandroidmvp.lobby.LobbyFragment
+import com.jshvarts.daggerandroidmvp.lobby.LobbyFragmentModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
