@@ -8,6 +8,8 @@ This project accompanies my article *Demystifying the new Dagger Android module*
 
 Java version is here: https://github.com/jshvarts/DaggerAndroidSampleApp
 
+This branch adds kapt incremental support. See https://medium.com/@daniel_novak/making-incremental-kapt-work-speed-up-your-kotlin-projects-539db1a771cf for details.
+
 ## License
 
     Copyright 2017-2019 James Shvarts
