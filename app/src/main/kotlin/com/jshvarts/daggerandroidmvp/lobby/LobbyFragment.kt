@@ -1,18 +1,18 @@
 package com.jshvarts.daggerandroidmvp.lobby
 
+import android.app.Fragment
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import dagger.android.AndroidInjection
-import javax.inject.Inject
 import android.widget.TextView
-import android.app.Fragment
 import butterknife.BindView
 import butterknife.ButterKnife
-import com.jshvarts.daggerandroidmvp.R
 import butterknife.Unbinder
+import com.jshvarts.daggerandroidmvp.R
+import dagger.android.AndroidInjection
+import javax.inject.Inject
 
 class LobbyFragment : Fragment() {
 
@@ -24,22 +24,23 @@ class LobbyFragment : Fragment() {
 
     private lateinit var unbinder: Unbinder
 
+    override fun onAttach(context: Context) {
+        AndroidInjection.inject(this)
+        super.onAttach(context)
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.lobby_fragment, container, false)
         unbinder = ButterKnife.bind(this, view)
         return view
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         sayFragmentHello()
     }
 
-    override fun onAttach(context: Context?) {
-        AndroidInjection.inject(this)
-        super.onAttach(context)
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

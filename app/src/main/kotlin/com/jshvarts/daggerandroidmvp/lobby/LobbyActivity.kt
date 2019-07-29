@@ -4,20 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jshvarts.daggerandroidmvp.R
 import com.jshvarts.daggerandroidmvp.common.data.CommonHelloService
-import dagger.android.AndroidInjection
-import dagger.android.AndroidInjector
-import dagger.android.HasFragmentInjector
 import javax.inject.Inject
-import dagger.android.DispatchingAndroidInjector
 import android.widget.TextView
-import android.app.Fragment
 import butterknife.BindView
 import butterknife.ButterKnife
+import dagger.android.*
 
-class LobbyActivity : AppCompatActivity(), HasFragmentInjector {
+class LobbyActivity : AppCompatActivity(), HasAndroidInjector {
 
     @Inject
-    lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
+    lateinit var androidInjector: DispatchingAndroidInjector<Any>
 
     @Inject
     lateinit var commonHelloService: CommonHelloService
@@ -46,7 +42,9 @@ class LobbyActivity : AppCompatActivity(), HasFragmentInjector {
         //println("call to LobbyActivityHelloService: " + lobbyActivityHelloService.sayHello())
     }
 
-    override fun fragmentInjector(): AndroidInjector<Fragment> = fragmentDispatchingAndroidInjector
+    override fun androidInjector(): AndroidInjector<Any> {
+       return androidInjector
+    }
 
     private fun sayCommonHello() {
         commonHelloTextView.text = commonHelloService.sayHello()
